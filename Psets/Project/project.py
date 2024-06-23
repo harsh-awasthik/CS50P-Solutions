@@ -189,6 +189,8 @@ def convert_reducedechelon(echelon_mat):
         for col in range(row, len(echelon_mat)):
             if echelon_mat[row][col] == 1:
                 break
+        else:
+            continue
 
         for i in range(1, row+1):
             factor = echelon_mat[row - i][col]
