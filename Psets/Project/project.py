@@ -215,11 +215,11 @@ def find_infsoln(mat_a, mat_b):
     v = len(mat_b) #finding the number of variables
 
     #To find Dependent Varibles
-    dep_var = []
+    dep_var = {}
     for i in range(v-1, -1, -1):
         for j in range(v-1, -1, -1):
             if mat_a[i][j] == 1:
-                dep_var.append(j)
+                dep_var[j] = i
                 break
 
     #To find Independent Variables
@@ -237,11 +237,11 @@ def find_infsoln(mat_a, mat_b):
 
     #To add Dependent Variables to solns
     for i in sorted(dep_var):
-        temp = f"{mat_b[i] : .02f}"
+        temp = f"{mat_b[dep_var[i]] : .02f}"
 
         for ind in range(len(ind_var)):
-            if mat_a[i][ind_var[ind]] != 0:
-                temp += f" {-1 * mat_a[i][ind_var[ind]] : .02f}{ind_x[ind]}"
+            if mat_a[dep_var[i]][ind_var[ind]] != 0:
+                temp += f" {-1 * mat_a[dep_var[i]][ind_var[ind]] : .02f}{ind_x[ind]}"
 
         solutions[f"x{i+1}"] = temp
 

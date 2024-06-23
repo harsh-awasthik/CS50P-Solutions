@@ -1,4 +1,4 @@
-def get_matrix():
+def get_mat_ef_ref(): #to get matrices for echelon and reduced echelon form
     matrices = {
         "identity_matrix": [
             [1, 0, 0, 1],
@@ -113,3 +113,48 @@ def get_matrix():
         ]
     }
     return matrices
+def get_infsolmat(): #to get infsoln matA, matB and the result
+    mat = {
+        "mat11" : [
+            [1, 0, 0, 0, 2],
+            [0, 1, 0, 0, 4],
+            [0, 0, 1, 0, 0],
+            [0, 0, 0, 1, 0],
+            [0.0, 0.0, 0.0, 0.0, 0.0],
+        ],
+        "mat12" : [2, 4, 2, 4, 0],
+        "mat13" : {
+            "x1": " 2.00 -2.00x5",
+            "x2": " 4.00 -4.00x5",
+            "x3": " 2.00",
+            "x4": " 4.00",
+            "x5": " x5"
+        },
+        "mat21" : [
+            [1, 0, 0, 0, 2],
+            [0, 0, 1, 0, 4],
+            [0, 0, 0, 1, 0],
+            [0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0],
+        ],
+        "mat22" : [2, 4, 3, 0, 0],
+        "mat23" : {
+            "x1": " 2.00 -2.00x5",
+            "x2": " x2",
+            "x3": " 4.00 -4.00x5",
+            "x4": " 3.00",
+            "x5": " x5"
+        },
+        "mat31" : [
+            [1, 2, 4],
+            [0, 0, 0],
+            [0, 0, 0]
+        ],
+        "mat32" : [1, 0, 0],
+        "mat33" : {
+            "x1": " 1.00 -2.00x2 -4.00x3",
+            "x2": " x2",
+            "x3": " x3"
+        }
+    }
+    return mat
