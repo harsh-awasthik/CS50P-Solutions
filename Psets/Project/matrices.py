@@ -113,7 +113,7 @@ def get_mat_ef_ref(): #to get matrices for echelon and reduced echelon form
         ]
     }
     return matrices
-def get_infsolmat(): #to get infsoln matA, matB and the result
+def get_infsolmat(): #to get Infinite solution from matA and matB
     mat = {
         "mat11" : [
             [1, 0, 0, 0, 2],

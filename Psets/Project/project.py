@@ -248,5 +248,5 @@ def find_infsoln(mat_a, mat_b):
     return solutions
 
 
-if __name__ == "__main__":
+if __name__ == "__main__": #to run the main function
     main()
