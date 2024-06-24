@@ -1,0 +1,5 @@
+#For testing functions in the code
+pytest == 8.2.2
+
+#To be used in test_project.py
+numpy == 2.0.0
