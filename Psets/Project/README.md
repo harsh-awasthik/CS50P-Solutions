@@ -86,6 +86,11 @@ To run tests, run the following command
   pytest test_project.py
 ```
 
+## Learning Experiences
+This experience taught me the importance of Run and Debug function in python
+Round function and robust error handling in software development. Also gains my experience by a lot in pytest library
+Also I have not taken help from ai (simple fact is they can’t help) nor by the internet as there is no website which creates Echelon form and Reduced Echelon form directly (as taught in most of the schools)
+
 
 ## Support
 
