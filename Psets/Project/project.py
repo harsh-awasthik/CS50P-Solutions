@@ -22,29 +22,29 @@ def main():
     aug_mat = get_augmat(variables, eq)  # get augments matrix
 
     #Open this if you want to see Augmented Matrix
-    print("Augmented Matrix")
+    '''print("Augmented Matrix")
     for i in aug_mat:
         print(i)
-    print()
+    print()'''
 
     # Converting the augmented matrix into upper triangular matrix (i.e echelon Form)
     echelon_mat = convert_echelonForm(aug_mat, eq)
 
     #Open this if You want to see echelon Form
-    print("echelon Form")
+    '''print("echelon Form")
     for i in echelon_mat:
         print(i)
-    print()
+    print()'''
 
 
     # Converting to reduced echelon Form
     ref_mat = convert_reducedechelon(echelon_mat)
 
     #Open this if You want to see reduced echelon Form
-    print("reduced echelon Form")
+    '''print("reduced echelon Form")
     for i in ref_mat:
         print(i)
-    print()
+    print()'''
 
     # Converitng aug_mat to the form Ax + b
     mat_a, mat_b = [], []
@@ -169,17 +169,21 @@ def convert_echelonForm(aug_mat, eq):
                 for j in aug_mat[r]:
                     temp.append(j/aug_mat[r][c])
                 aug_mat[r] = temp
-                print("Augmented Matrix")
+                '''
+                    #To View Steps
+                    print("Augmented Matrix")
                 for i in aug_mat:
-                    print(i)
+                    print(i)'''
 
                 for i in range(r + 1, eq):
                     factor = aug_mat[i][c]
                     temp = [a - factor*b for a, b in zip(aug_mat[i], aug_mat[r])]
                     aug_mat[i] = temp
+                    '''
+                    #To View Steps
                     print("Augmented Matrix")
                     for i in aug_mat:
-                        print(i)
+                        print(i)'''
 
         c += 1
 
