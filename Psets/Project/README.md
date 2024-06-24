@@ -1,6 +1,6 @@
 
 # LINEAR EQUATIONS SOLVER
-#### Video Url -
+#### Video Url - https://youtu.be/mjkTxAcqs4A
 
 I opted to implement the Echelon method to transform the matrix into Echelon form, and subsequently into Reduced Row Echelon Form (RREF). This approach allows for efficiently determining the type of solutions for a system of n linear equations with m variables, without relying on external libraries. It is particularly effective for handling any number of equations in a systematic manner.
 ## Features
